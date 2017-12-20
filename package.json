@@ -1,0 +1,32 @@
+{
+  "name": "sandbox-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "example": "webpack-dev-server --progress --colors",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphamorim/sandbox-react.git"
+  },
+  "devDependencies": {
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "keywords": ["sandbox", "react", "components", "storybook"],
+  "author": "Raphael Amorim <rapha850@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raphamorim/sandbox-react/issues"
+  },
+  "homepage": "https://github.com/raphamorim/sandbox-react#readme"
+}
