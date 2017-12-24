@@ -2,7 +2,7 @@
 
 > Create a React Component Sandbox based on compositions
 
-Integrate Live documentation on real-world components
+Integrate Live documentation on real-world React components
 
 ![Example](assets/example.gif)
 
@@ -18,11 +18,11 @@ yarn add reactsandbox
 
 ```jsx
 import React from 'react'
-import withSandbox, { Types } from './index'
+import withSandbox, { Types } from 'reactsandbox'
 
-const Book = ({title, author, year, transparent, renderAvatar}) =>
+const Book = ({title, author, year, transparent, renderCover}) =>
   <div className={`book ${(transparent)? 'transparent' : ''}`}>
-    <div className='cover'>{renderAvatar}</div>
+    <div className='cover'>{renderCover}</div>
     <div className='info'>
       <div className='title'>{title}</div>
       <div className='author'>{author}</div>
@@ -31,11 +31,11 @@ const Book = ({title, author, year, transparent, renderAvatar}) =>
   </div>
 
 const BookSandbox = withSandbox(Book, {
-  transparent: Types.Boolean(false, 'Set if Book Card is Transparent'),
+  transparent: Types.Boolean(false, 'Set Book Card as Transparent'),
   title: Types.String('My Book Name', 'Description of Title'),
   author: Types.String('John Doe', 'Description of Author'),
-  year: Types.Number(1995, 'Year of Publish'),
-  renderAvatar: Types.ReactElement('<img src="assets/book-cover.jpg"/>', 'Render ReactElement as Author Avatar')
+  year: Types.Number(1995, 'Year of Publication'),
+  renderCover: Types.ReactElement('<img src="book-cover.jpg"/>', 'Render ReactElement as Cover Book')
 })
 
 export default Book
@@ -51,3 +51,9 @@ export BookSandbox
 #### Number
 
 #### ReactElement
+
+## Run the Example:
+
+```sh
+
+```

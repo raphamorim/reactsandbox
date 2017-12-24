@@ -18,14 +18,14 @@ const Sandbox = ({ Component, propsComponent, controls }) => {
   }
 
   return (
-    <div className='resandbox'>
-      <div className='resandbox-sandbox'>
+    <div className='reactsandbox'>
+      <div className='reactsandbox-sandbox'>
         {Component}
       </div>
-      <div className='resandbox-controls'>
+      <div className='reactsandbox-controls'>
         {controls}
       </div>
-      <div className='resandbox-code'>
+      <div className='reactsandbox-code'>
         <pre>{code}</pre>
       </div>
     </div>

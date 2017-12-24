@@ -1,0 +1,3 @@
+- fazer o exemplo funcionar separadamente
+- escrever alguns testes com jest
+- testar o exemplo depois de publicar no NPM

@@ -1,0 +1,54 @@
+body {
+  font-family: 'OpenSans', Helvetica, sans-serif;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.container .link {
+  color: #C51D2C;
+  text-decoration: none;
+}
+
+.book {
+  box-sizing: border-box;
+  background: #ffffff;
+  height: 230px;
+  width: 310px;
+  position: relative;
+  display: flex;
+  border-radius: 3px;
+  border: 1px solid #e9e9e9;
+  box-shadow: 0 1px 4px 0px rgba(0,0,0,.05);
+  font-weight: 700;
+  z-index: 200;
+  font-weight: lighter;
+  transition: all 300ms ease;
+}
+
+.book.transparent {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.book .info {
+  margin-top: 50%;
+}
+
+.book .cover {
+  width: 160px;
+  height: 220px;
+  overflow: hidden;
+}
+
+.book .cover img {
+  width: 100%;
+}
+
+.book .title, .book .author, .book .year {
+  padding: 0 10px;
+}

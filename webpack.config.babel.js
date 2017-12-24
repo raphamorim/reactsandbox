@@ -5,10 +5,18 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const sourcePath = path.join(__dirname, 'src');
 
 const config = {
-  entry: [path.resolve(sourcePath, 'example.js')],
+  entry: [path.resolve(sourcePath, 'index.js')],
+  externals: {
+    'react': {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'React',
+      root: 'React'
+    }
+  },
   output: {
     path: __dirname,
-    filename: 'bundle.js'
+    filename: 'reactsandbox.js'
   },
   resolve: {
     extensions: ['.js'],
@@ -16,6 +24,7 @@ const config = {
       sourcePath,
       path.resolve(__dirname, 'node_modules'),
 
+      // yarn workspaces
       path.resolve(__dirname, '../../node_modules'),
     ]
   },
@@ -28,17 +37,18 @@ const config = {
           'babel-loader'
         ],
         include: sourcePath
-      },
-      {
-        test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
       }
     ]
   },
-  plugins: []
+  plugins: [],
+  devServer: {
+    contentBase: path.join(__dirname, "example"),
+    compress: true,
+    port: 9000
+  }
 }
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'PROD') {
   config.plugins.push(
     new UglifyJsPlugin()
   )

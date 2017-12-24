@@ -1,12 +1,20 @@
 {
   "name": "reactsandbox",
   "version": "0.0.1",
-  "description": "",
+  "description": "Create React Sandboxes based on compositions",
   "main": "index.js",
+  "peerDependencies": {
+    "react": "^16.2.0"
+  },
+  "files": [
+    "styles/",
+    "reactsandbox.js"
+  ],
   "scripts": {
     "build": "webpack",
+    "build:prod": "NODE_ENV=PROD webpack",
     "example": "webpack-dev-server --progress --colors",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --no-cache --ci --runInBand"
   },
   "repository": {
     "type": "git",
@@ -17,13 +25,10 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.7",
-    "js-beautify": "^1.7.5",
     "jsx-to-string": "^1.3.0",
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "recompose": "^0.23.1",
-    "style-loader": "^0.19.1",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
   },
@@ -31,7 +36,8 @@
     "sandbox",
     "react",
     "components",
-    "storybook"
+    "storybook",
+    "react-dom"
   ],
   "author": "Raphael Amorim <rapha850@gmail.com>",
   "license": "MIT",
