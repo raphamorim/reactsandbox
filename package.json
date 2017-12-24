@@ -1,5 +1,5 @@
 {
-  "name": "resandbox",
+  "name": "reactsandbox",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/raphamorim/resandbox.git"
+    "url": "git+https://github.com/raphamorim/reactsandbox.git"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -20,7 +20,6 @@
     "css-loader": "^0.28.7",
     "js-beautify": "^1.7.5",
     "jsx-to-string": "^1.3.0",
-    "playkit-header": "^3.3.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "recompose": "^0.23.1",
@@ -37,7 +36,7 @@
   "author": "Raphael Amorim <rapha850@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/raphamorim/resandbox/issues"
+    "url": "https://github.com/raphamorim/reactsandbox/issues"
   },
-  "homepage": "https://github.com/raphamorim/resandbox#readme"
+  "homepage": "https://github.com/raphamorim/reactsandbox#readme"
 }

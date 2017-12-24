@@ -27,6 +27,7 @@ function BooleanType(value, description) {
 
 const Types = {
   String: StringType,
+  Number: StringType,
   Boolean: BooleanType,
   ReactElement: ReactElementType,
 }

@@ -16,7 +16,7 @@ function parseReactElement(value) {
     const properties = {}
     if (child.getAttribute('src')) {
       properties['src'] = child.getAttribute('src')
-      properties['style'] = {width:'100%'}
+      // properties['style'] = {width:'100%'}
     }
     if (child.getAttribute('class')) {
       properties['className'] = child.getAttribute('class')
