@@ -1,5 +1,5 @@
-const withSandbox = require('./withSandbox');
-const Types = require('./Types');
+import withSandbox from './withSandbox';
+import Types from './Types';
 
-export default withSandbox;
 export { Types };
+export default withSandbox;

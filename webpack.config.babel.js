@@ -26,6 +26,10 @@ const config = {
           'babel-loader'
         ],
         include: sourcePath
+      },
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
       }
     ]
   },

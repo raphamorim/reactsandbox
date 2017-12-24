@@ -1,14 +1,14 @@
-# sandbox-react
+# resandbox
 
 ```bash
-yarn add sandbox-react
+yarn add resandbox
 ```
 
 **Book.js**
 
 ```jsx
 import React from 'react'
-import withSandbox, { Types } from 'sandbox-react'
+import withSandbox, { Types } from 'resandbox'
 
 const Book = ({title, author}) =>
   <div className='book'>
