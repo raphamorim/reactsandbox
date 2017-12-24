@@ -15,6 +15,8 @@ const config = {
     modules: [
       sourcePath,
       path.resolve(__dirname, 'node_modules'),
+
+      path.resolve(__dirname, '../../node_modules'),
     ]
   },
   module: {
