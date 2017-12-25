@@ -1,8 +1,18 @@
 # reactsandbox
 
+[![CircleCI](https://circleci.com/gh/raphamorim/reactsandbox/tree/master.svg?style=svg)](https://circleci.com/gh/raphamorim/reactsandbox/tree/master)
+
 > Create a React Component Sandbox based on compositions
 
-Integrate Live documentation on real-world React components
+Integrate Live documentation on real-world React components. 
+
+Reasons to use `reactsandbox`:
+
+- Fully Hackable (you can create change everthing to your own style, see [available CSS classes](https://github.com/raphamorim/reactsandbox/blob/master/styles/reactsandbox.css))
+
+- You can use with any Builder (Webpack, Rollup, Browserify, Parcel...). Since `reactsanbox` is only a HOC.
+
+- Lightweight
 
 ![Example](assets/example.gif)
 
