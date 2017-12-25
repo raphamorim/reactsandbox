@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const sourcePath = path.join(__dirname, 'src');
 
 const config = {
+  target: 'web',
   entry: [path.resolve(sourcePath, 'index.js')],
   externals: {
     'react': {
