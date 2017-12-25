@@ -8,11 +8,13 @@ Integrate Live documentation on real-world React components.
 
 Reasons to use `reactsandbox`:
 
-- Fully Hackable (you can create change everthing to your own style, see [available CSS classes](https://github.com/raphamorim/reactsandbox/blob/master/styles/reactsandbox.css))
+- Fully Hackable (you can change everthing to your own style, see [available CSS classes](https://github.com/raphamorim/reactsandbox/blob/master/styles/reactsandbox.css)).
 
 - You can use with any Builder (Webpack, Rollup, Browserify, Parcel...). Since `reactsanbox` is only a HOC.
 
-- Lightweight
+- Easy to add on existent component and update docs for it. Since it can use `PropTypes` or `Types`.
+
+- Lightweight.
 
 ![Example](assets/example.gif)
 
