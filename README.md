@@ -12,7 +12,7 @@ Reasons to use `reactsandbox`:
 
 - You can use with any Builder (Webpack, Rollup, Browserify, Parcel...). Since `reactsanbox` is only a HOC.
 
-- Easy to add on existent component and update docs for it. Since it can use `PropTypes` or `Types`.
+- Easy to add on existent component and fast update on documentation. Since it can be used with `PropTypes` or `Types`.
 
 - Lightweight.
 
@@ -42,6 +42,7 @@ const Book = ({title, author, year, transparent, renderCover}) =>
     </div>
   </div>
 
+// Compose Sandbox for Book Component
 const BookSandbox = withSandbox(Book, {
   transparent: Types.Boolean(false, 'Set Book Card as Transparent'),
   title: Types.String('My Book Name', 'Description of Title'),
@@ -51,18 +52,54 @@ const BookSandbox = withSandbox(Book, {
 })
 
 export default Book
-export BookSandbox
+export BookSandbox // export Component Sandbox either
 ```
 
 ## Types
 
+Note that `Type` is a custom object, then you can create your own.
+
+### Custom Types
+
 #### Boolean
+
+Returns Type object from Boolean.
+
+**default value**: `false`
+
+```jsx
+Types.Boolean(false, 'prop description') 
+```
 
 #### String
 
+Returns Type object from String.
+
+**default value**: `''`
+
+```jsx
+Types.String('prop value', 'prop description') 
+```
+
 #### Number
 
-#### ReactElement
+Returns Type object from Number.
+
+**default value**: `0`
+
+```jsx
+Types.String(100, 'prop description') 
+```
+
+#### ReactElement (not stable, experimental)
+
+Returns Type object from ReactElement.
+
+**default value**: `null`
+
+```jsx
+Types.ReactElement('<img src="source-to-my-image.png"/>', 'prop description') 
+```
 
 ## Run the Example:
 
