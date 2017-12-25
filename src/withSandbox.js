@@ -60,7 +60,7 @@ function withSandbox(Component, config) {
             Input = compose(withState('checked', 'setChecked', value))(BooleanInput)
           }
 
-          if (type === 'string') {
+          if (type === 'string' || type === 'number') {
             const StringInput = ({inputValue, setInputValue}) => (
               <input type={'text'} value={inputValue}
                 onChange={(evt) => {

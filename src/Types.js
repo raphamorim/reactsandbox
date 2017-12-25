@@ -1,6 +1,9 @@
 import parseReactElement from './parseReactElement'
 
 function StringType(value, description) {
+  if (!value) value = ''
+  if (!description) description = ''
+
   return {
     value: value,
     description: description,
@@ -18,6 +21,9 @@ function ReactElementType(value, description) {
 }
 
 function BooleanType(value, description) {
+  if (typeof(value) !== 'boolean') value = false
+  if (!description) description = ''
+
   return {
     value: value,
     description: description,
@@ -25,9 +31,21 @@ function BooleanType(value, description) {
   }
 }
 
+function NumberType(value = 0, description) {
+  if (!(Number.isInteger(value))) value = parseInt(value, 10)
+  if (!value || value.toString() === 'NaN') value = 0
+  if (!description) description = ''
+
+  return {
+    value: value,
+    description: description,
+    type: 'number',
+  }
+}
+
 const Types = {
   String: StringType,
-  Number: StringType,
+  Number: NumberType,
   Boolean: BooleanType,
   ReactElement: ReactElementType,
 }
