@@ -1,31 +1,13 @@
 import path from 'path'
 import webpack from 'webpack'
 
-const sourcePath = path.join(__dirname);
-
-let distConfig = {
-  entry: path.resolve(sourcePath, 'src/index.js'),
-  filename: 'reactsandbox.js'
-}
-
-if (process.env.NODE_ENV === 'DEV_SERVER') {
-  distConfig.entry = path.resolve(sourcePath, 'assets/example.js')
-  distConfig.filename = 'bundle.js'
-}
-
 const config = {
   target: 'web',
-  entry: distConfig.entry,
-  externals: {
-    // Use external version of React
-    "react": "React"
-  },
+  entry: path.resolve(__dirname, 'assets/example.js'),
   output: {
     path: __dirname,
-    library: 'reactsandbox',
     libraryTarget: 'umd',
-    umdNamedDefine: true,
-    filename: distConfig.filename
+    filename: 'bundle.js'
   },
   resolve: {
     alias: {
@@ -33,7 +15,6 @@ const config = {
     },
     extensions: ['.js'],
     modules: [
-      sourcePath,
       path.resolve(__dirname, 'node_modules'),
 
       // yarn workspaces
