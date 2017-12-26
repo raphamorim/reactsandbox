@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import withSandbox, { Types } from '../reactsandbox'
+import withSandbox, { Types } from 'reactsandbox'
 
 const Book = ({title, author, year, transparent, renderCover}) =>
   <div className={`book ${(transparent)? 'transparent' : ''}`}>

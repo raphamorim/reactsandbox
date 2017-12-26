@@ -10,9 +10,6 @@ const config = {
     filename: 'bundle.js'
   },
   resolve: {
-    alias: {
-      react: path.resolve(__dirname, '../../node_modules/react'),
-    },
     extensions: ['.js'],
     modules: [
       path.resolve(__dirname, 'node_modules'),
@@ -29,7 +26,7 @@ const config = {
         use: [
           'babel-loader'
         ],
-        include: sourcePath
+        include: path.resolve(__dirname, 'assets'),
       }
     ],
   },
