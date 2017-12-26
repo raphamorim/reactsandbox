@@ -1,0 +1,64 @@
+{
+  "name": "reactsandbox",
+  "version": "0.2.0",
+  "description": "Create React Sandboxes based on compositions",
+  "main": "reactsandbox.js",
+  "peerDependencies": {
+    "react": "^15.6.0"
+  },
+  "files": [
+    "styles/",
+    "reactsandbox.js"
+  ],
+  "scripts": {
+    "build": "webpack",
+    "build:prod": "NODE_ENV=PROD webpack",
+    "example": "NODE_ENV=DEV_SERVER webpack-dev-server --progress --colors",
+    "test": "jest --no-cache --ci --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphamorim/reactsandbox.git"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "20.1.0-delta.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "jest": "20.1.0-delta.1",
+    "json-stringify-pretty-compact": "^1.0.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "recompose": "^0.26.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "keywords": [
+    "sandbox",
+    "react",
+    "components",
+    "storybook",
+    "react-dom"
+  ],
+  "author": "Raphael Amorim <rapha850@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raphamorim/reactsandbox/issues"
+  },
+  "homepage": "https://github.com/raphamorim/reactsandbox#readme",
+  "devEngines": {
+    "node": "8.x"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "verbose": true,
+    "resetModules": true
+  }
+}
