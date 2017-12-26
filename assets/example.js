@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import withSandbox, { Types } from './index'
+import withSandbox, { Types } from '../reactsandbox'
 
 const Book = ({title, author, year, transparent, renderCover}) =>
   <div className={`book ${(transparent)? 'transparent' : ''}`}>
@@ -12,12 +12,15 @@ const Book = ({title, author, year, transparent, renderCover}) =>
     </div>
   </div>
 
+console.log(withSandbox)
+console.log(Types)
+
 const BookSandbox = withSandbox(Book, {
   transparent: Types.Boolean(false, 'Set Book Card as Transparent'),
   title: Types.String('My Book Name', 'Description of Title'),
   author: Types.String('John Doe', 'Description of Author'),
   year: Types.Number(1995, 'Year of Publication'),
-  renderCover: Types.ReactElement('<img src="book-cover.jpg"/>', 'Render ReactElement as Cover Book')
+  renderCover: Types.ReactElement('<img src="assets/book-cover.jpg"/>', 'Render ReactElement as Cover Book')
 })
 
 const App = (

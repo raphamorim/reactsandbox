@@ -2,7 +2,7 @@
   "name": "reactsandbox",
   "version": "0.1.0",
   "description": "Create React Sandboxes based on compositions",
-  "main": "index.js",
+  "main": "reactsandbox.js",
   "peerDependencies": {
     "react": "^16.2.0"
   },
@@ -13,7 +13,7 @@
   "scripts": {
     "build": "webpack",
     "build:prod": "NODE_ENV=PROD webpack",
-    "example": "webpack-dev-server --progress --colors",
+    "example": "NODE_ENV=DEV_SERVER webpack-dev-server --progress --colors",
     "test": "jest --no-cache --ci --runInBand"
   },
   "repository": {

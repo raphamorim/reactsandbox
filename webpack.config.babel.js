@@ -1,22 +1,27 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const sourcePath = path.join(__dirname, 'src');
+const sourcePath = path.join(__dirname);
+
+let distConfig = {
+  entry: path.resolve(sourcePath, 'src/index.js'),
+  filename: 'reactsandbox.js'
+}
+
+if (process.env.NODE_ENV === 'DEV_SERVER') {
+  distConfig.entry = path.resolve(sourcePath, 'assets/example.js')
+  distConfig.filename = 'bundle.js'
+}
 
 const config = {
   target: 'web',
-  entry: [path.resolve(sourcePath, 'index.js')],
-  externals: {
-    'react': {
-      commonjs: 'react',
-      commonjs2: 'react',
-      amd: 'React',
-      root: 'React'
-    }
-  },
+  entry: distConfig.entry,
   output: {
     path: __dirname,
-    filename: 'reactsandbox.js'
+    library: 'reactsandbox',
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
+    filename: distConfig.filename
   },
   resolve: {
     extensions: ['.js'],
@@ -41,11 +46,6 @@ const config = {
     ]
   },
   plugins: [],
-  devServer: {
-    contentBase: path.join(__dirname, "example"),
-    compress: true,
-    port: 9000
-  }
 }
 
 if (process.env.NODE_ENV === 'PROD') {
@@ -62,7 +62,6 @@ if (process.env.NODE_ENV === 'PROD') {
       output: {
         comments: false,
       },
-      exclude: [/\.min\.js$/gi]
     })
   )
   config.plugins.push(new webpack.NoEmitOnErrorsPlugin())

@@ -1,5 +1,3 @@
-// import escapeTextContent from './escapeTextContent'
-
 import React from 'react'
 
 const parser = new DOMParser()
