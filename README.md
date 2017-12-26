@@ -4,7 +4,7 @@
 
 > Create a React Component Sandbox based on compositions
 
-Integrate Live documentation on real-world React components. 
+Integrate Live documentation on real-world React components.
 
 Reasons to use `reactsandbox`:
 
@@ -71,7 +71,7 @@ Returns Type object from Boolean.
 **default value**: `false`
 
 ```jsx
-Types.Boolean(false, 'prop description') 
+Types.Boolean(false, 'prop description')
 ```
 
 #### String
@@ -81,7 +81,7 @@ Returns Type object from String.
 **default value**: `''`
 
 ```jsx
-Types.String('prop value', 'prop description') 
+Types.String('prop value', 'prop description')
 ```
 
 #### Number
@@ -91,7 +91,7 @@ Returns Type object from Number.
 **default value**: `0`
 
 ```jsx
-Types.String(100, 'prop description') 
+Types.String(100, 'prop description')
 ```
 
 #### ReactElement (not stable, experimental)
@@ -101,11 +101,5 @@ Returns Type object from ReactElement.
 **default value**: `null`
 
 ```jsx
-Types.ReactElement('<img src="source-to-my-image.png"/>', 'prop description') 
-```
-
-## Run the Example:
-
-```sh
-
+Types.ReactElement('<img src="source-to-my-image.png"/>', 'prop description')
 ```

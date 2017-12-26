@@ -8,11 +8,6 @@ let distConfig = {
   filename: 'reactsandbox.js'
 }
 
-if (process.env.NODE_ENV === 'DEV_SERVER') {
-  distConfig.entry = path.resolve(sourcePath, 'assets/example.js')
-  distConfig.filename = 'bundle.js'
-}
-
 const config = {
   target: 'web',
   entry: distConfig.entry,

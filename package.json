@@ -4,7 +4,7 @@
   "description": "Create React Sandboxes based on compositions",
   "main": "reactsandbox.js",
   "peerDependencies": {
-    "react": "^15.6.0"
+    "react": "^16.2.0"
   },
   "files": [
     "styles/",
@@ -13,7 +13,6 @@
   "scripts": {
     "build": "webpack",
     "build:prod": "NODE_ENV=PROD webpack",
-    "example": "NODE_ENV=DEV_SERVER webpack-dev-server --progress --colors",
     "test": "jest --no-cache --ci --runInBand"
   },
   "repository": {
@@ -32,8 +31,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "recompose": "^0.26.0",
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
+    "webpack": "^3.8.1"
   },
   "keywords": [
     "sandbox",
