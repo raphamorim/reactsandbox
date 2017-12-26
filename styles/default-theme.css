@@ -1,6 +1,7 @@
 .reactsandbox {
   position: relative;
   width: 100%;
+  background: #FFF;
 }
 .reactsandbox-sandbox {
   background-color: rgba(0, 0, 0, 0.05);
@@ -9,6 +10,8 @@
   padding: 10px;
 }
 .reactsandbox-controls {
+  font-family: 'OpenSans', Helvetica, sans-serif;
+  font-size: 14px;
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -17,6 +20,8 @@
   padding: 10px;
 }
 .reactsandbox-code {
+  font-family: 'OpenSans', Helvetica, sans-serif;
+  font-size: 12px;
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -24,11 +29,6 @@
   background: #fff;
   padding: 10px;
   overflow-x: scroll;
-}
-@media screen and (max-width: 900px) {
-  .reactsandbox-controls .control-description {
-    display: none;
-  }
 }
 .reactsandbox-controls .control {
   display: flex;
@@ -38,17 +38,29 @@
   display: flex;
   align-items: center;
 }
-.reactsandbox-controls .control-switch input {
+.reactsandbox-controls .control-switch input[type='text'] {
   padding: 5px;
   margin-left: 6px;
-  min-width: 240px;
+  min-width: 50%;
+}
+.reactsandbox-controls .control-switch input[type='checkbox'] {
+  padding: 5px;
+  margin-left: 6px;
 }
 .reactsandbox-controls .control-prop {
   padding: 4px 14px;
   min-width: 100px;
   background: #eee;
-
 }
 .reactsandbox-controls .control-description {
   color: #666;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .reactsandbox-controls .control-description {
+    display: none;
+  }
 }

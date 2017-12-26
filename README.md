@@ -10,9 +10,9 @@ Reasons to use `reactsandbox`:
 
 - Fully Hackable (you can change everthing or create your own style, see [available CSS classes](https://github.com/raphamorim/reactsandbox/blob/master/styles/reactsandbox.css)).
 
-- You can use with any Builder (Webpack, Rollup, Browserify, Parcel...). Since `reactsanbox` is only a HOC.
+- You can use with any Builder (Webpack, Rollup, Browserify, Parcel...). Because `reactsanbox` is only a HOC.
 
-- Easy to add on existent component and fast update on documentation. Since it can be used with `PropTypes` or `Types`.
+- Easy to add on existent component and fast update on documentation, it can be used with `PropTypes` or `Types`.
 
 - Lightweight.
 
@@ -31,6 +31,9 @@ yarn add reactsandbox
 ```jsx
 import React from 'react'
 import withSandbox, { Types } from 'reactsandbox'
+
+// you can import styles or create your own
+import 'reactsandbox/styles/default-theme.css'
 
 const Book = ({title, author, year, transparent, renderCover}) =>
   <div className={`book ${(transparent)? 'transparent' : ''}`}>
