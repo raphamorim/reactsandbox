@@ -1,5 +1,5 @@
-const path = require('path');
-const webpack = require('webpack');
+import path from 'path'
+import webpack from 'webpack'
 
 const sourcePath = path.join(__dirname);
 
@@ -16,6 +16,10 @@ if (process.env.NODE_ENV === 'DEV_SERVER') {
 const config = {
   target: 'web',
   entry: distConfig.entry,
+  externals: {
+    // Use external version of React
+    "react": "React"
+  },
   output: {
     path: __dirname,
     library: 'reactsandbox',
@@ -24,6 +28,9 @@ const config = {
     filename: distConfig.filename
   },
   resolve: {
+    alias: {
+      react: path.resolve(__dirname, '../../node_modules/react'),
+    },
     extensions: ['.js'],
     modules: [
       sourcePath,
@@ -43,7 +50,7 @@ const config = {
         ],
         include: sourcePath
       }
-    ]
+    ],
   },
   plugins: [],
 }
@@ -74,4 +81,4 @@ if (process.env.NODE_ENV === 'PROD') {
   config.plugins.push(new webpack.HashedModuleIdsPlugin())
 }
 
-module.exports = config;
+export default config;

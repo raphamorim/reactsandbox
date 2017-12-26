@@ -14,7 +14,7 @@ Reasons to use `reactsandbox`:
 
 - Easy to add on existent component and fast update on documentation, it can be used with `PropTypes` or `Types`.
 
-- Lightweight.
+- Lightweight `~3.6K gzip`.
 
 ![Example](assets/example.gif)
 

@@ -1,13 +1,9 @@
 import React from 'react'
-import jsxToString from 'jsx-to-string'
-import {
-  compose,
-  withHandlers,
-  setDisplayName,
-  withState,
-  lifecycle,
-  enhance,
-} from 'recompose'
+import jsxToString from './jsxToString'
+import compose from 'recompose/compose'
+import setDisplayName from 'recompose/setDisplayName'
+import withState from 'recompose/withState'
+import lifecycle from 'recompose/lifecycle'
 import parseReactElement from './parseReactElement'
 
 const Sandbox = ({ Component, propsComponent, controls }) => {
