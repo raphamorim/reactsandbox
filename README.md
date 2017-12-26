@@ -58,6 +58,8 @@ export default Book
 export BookSandbox // export Component Sandbox either
 ```
 
+[See Demo](http://raphamorim.io/reactsandbox/)
+
 ## Types
 
 Note that `Type` is a custom object, then you can create your own.
