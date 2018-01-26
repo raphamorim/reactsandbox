@@ -5,8 +5,8 @@ function StringType(value, description) {
   if (!description) description = ''
 
   return {
-    value: value,
-    description: description,
+    value,
+    description,
     type: 'string',
   }
 }
@@ -15,7 +15,7 @@ function ReactElementType(value, description) {
   return {
     value: parseReactElement(value),
     rawValue: value,
-    description: description,
+    description,
     type: 'reactelement',
   }
 }
@@ -25,8 +25,8 @@ function BooleanType(value, description) {
   if (!description) description = ''
 
   return {
-    value: value,
-    description: description,
+    value,
+    description,
     type: 'boolean',
   }
 }
@@ -37,8 +37,8 @@ function NumberType(value = 0, description) {
   if (!description) description = ''
 
   return {
-    value: value,
-    description: description,
+    value,
+    description,
     type: 'number',
   }
 }
