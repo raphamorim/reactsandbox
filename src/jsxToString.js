@@ -45,7 +45,7 @@ function serializeItem (item, options, delimit=true) {
   } else if (typeof item === 'number' || typeof item === 'boolean') {
     result = `${item}`;
   } else if (Array.isArray(item)) {
-    var indentation = new Array(options.spacing + 1).join(' ');
+    const indentation = new Array(options.spacing + 1).join(' ');
     const delimiter = delimit ? ', ' : `\n${indentation}`;
     const items = item.map(i => serializeItem(i, options)).join(delimiter);
     result = delimit ? `[${items}]` : `${items}` ;
